@@ -1,0 +1,13 @@
+{
+  "baseUrl": "https://behavior.test",
+  "operationCount": 0,
+  "credentials": {
+    "bearer": "behavior-bearer-token",
+    "apiKey": "behavior-api-key",
+    "basicUser": "behavior-user",
+    "basicPassword": "behavior-password",
+    "basicHeader": "Basic YmVoYXZpb3ItdXNlcjpiZWhhdmlvci1wYXNzd29yZA=="
+  },
+  "authHeaders": {},
+  "cases": []
+}
