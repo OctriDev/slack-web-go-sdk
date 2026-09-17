@@ -127,7 +127,7 @@ func UsersProfileSet(ctx context.Context, clientConfig ClientConfig, token strin
 			"value":   value,
 		},
 		Headers: OperationHeaders(map[string]any{
-					"token": token,
+			"token": token,
 		}),
 		ContentType: "application/x-www-form-urlencoded",
 		OperationID: "UsersProfileSet",

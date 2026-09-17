@@ -146,7 +146,7 @@ func NewFilesRemoteNamespace(config ClientConfig) *FilesRemoteNamespace {
 
 // Add adds a file hosted by a remote service. Supply the remote file identity and metadata such as `title`, `filetype`, and `external_url` to register it. You can also provide `preview_image` and searchable text in `indexable_file_contents`.
 //
-// Adds a file from a remote service
+// # Adds a file from a remote service
 //
 // Parameters:
 //
@@ -164,7 +164,7 @@ func (sdk *FilesRemoteNamespace) Add(ctx context.Context, token *string, externa
 
 // Info retrieves information about a remote file registered with the service. Identify the file with `file` or the creator-defined `external_id`. The response confirms whether the request succeeded.
 //
-// Retrieve information about a remote file added to Slack
+// # Retrieve information about a remote file added to Slack
 //
 // Parameters:
 //
@@ -177,7 +177,7 @@ func (sdk *FilesRemoteNamespace) Info(ctx context.Context, token *string, file *
 
 // List lists remote files with optional channel and creation-time filters. Use `channel`, `ts_from`, and `ts_to` to narrow the collection, and use `limit` with `cursor` to paginate through results. The response confirms whether the request succeeded.
 //
-// Retrieve information about a remote file added to Slack
+// # Retrieve information about a remote file added to Slack
 //
 // Parameters:
 //
@@ -255,7 +255,7 @@ func NewMigrationNamespace(config ClientConfig) *MigrationNamespace {
 
 // Exchange maps workspace-specific user IDs to global user IDs for an Enterprise Grid workspace. Supply up to 400 comma-separated user IDs in `users`, and use `to_old` to request conversion from global IDs back to workspace-specific IDs. Include `team_id` when using an organization token to identify the workspace.
 //
-// For Enterprise Grid workspaces, map local user IDs to global user IDs
+// # For Enterprise Grid workspaces, map local user IDs to global user IDs
 //
 // Parameters:
 //

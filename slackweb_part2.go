@@ -38,7 +38,7 @@ func NewAdminTeamsSettingsNamespace(config ClientConfig) *AdminTeamsSettingsName
 
 // Info retrieves settings information for a specified workspace. Provide `team_id` to identify the workspace whose settings you want to inspect. Authenticate with a token that has the `admin.teams:read` scope.
 //
-// Fetch information about settings in a workspace
+// # Fetch information about settings in a workspace
 //
 // Parameters:
 //
@@ -75,7 +75,7 @@ func (sdk *AdminTeamsSettingsNamespace) SetDescription(ctx context.Context, toke
 
 // SetDiscoverability sets the discoverability setting for a specified workspace. Supply `team_id` and choose the workspace's new `discoverability` value. The value must be `open`, `invite_only`, `closed`, or `unlisted`.
 //
-// An API method that allows admins to set the discoverability of a given workspace
+// # An API method that allows admins to set the discoverability of a given workspace
 //
 // Parameters:
 //
@@ -236,7 +236,7 @@ func (sdk *AdminUsersNamespace) Invite(ctx context.Context, token string, teamId
 
 // List lists users on a workspace. Provide `team_id` to select the workspace, and use `cursor` and `limit` to control cursor-based pagination. Pass the returned `next_cursor` as `cursor` to retrieve the next page.
 //
-// List users on a workspace
+// # List users on a workspace
 //
 // Parameters:
 //
@@ -277,7 +277,7 @@ func (sdk *AdminUsersNamespace) SetAdmin(ctx context.Context, token string, team
 
 // SetExpiration sets an expiration timestamp for a guest user in a workspace. Supply `team_id`, `user_id`, and `expiration_ts` to identify the guest account and the time when it should be disabled. The authenticated user must provide an administrative token with the required write scope.
 //
-// Set an expiration for a guest user
+// # Set an expiration for a guest user
 //
 // Parameters:
 //
@@ -339,7 +339,7 @@ func (sdk *AdminUsersSessionNamespace) Invalidate(ctx context.Context, token str
 
 // Reset invalidates all valid sessions for a specified user across all devices. Supply `user_id` and optionally limit invalidation to mobile or web sessions with `mobile_only` or `web_only`. The authenticated user must provide an administrative token with the required write scope.
 //
-// Wipes all valid sessions on all devices for a given user
+// # Wipes all valid sessions on all devices for a given user
 //
 // Parameters:
 //
@@ -417,7 +417,7 @@ func (sdk *AppsPermissionsNamespace) Info(ctx context.Context, token *string) (*
 
 // Request requests additional permissions for an app using a permissions trigger. Supply the requested scopes and the trigger token to start the permission request flow. The authenticated user must provide a token and a valid `trigger_id` accepted by the permissions API.
 //
-// Allows an app to request additional scopes
+// # Allows an app to request additional scopes
 //
 // Parameters:
 //

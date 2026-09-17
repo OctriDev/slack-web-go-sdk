@@ -29,7 +29,7 @@ func AdminUsersAssign(ctx context.Context, clientConfig ClientConfig, token stri
 			"channel_ids":         channelIds,
 		},
 		Headers: OperationHeaders(map[string]any{
-					"token": token,
+			"token": token,
 		}),
 		ContentType: "application/x-www-form-urlencoded",
 		OperationID: "AdminUsersAssign",
@@ -75,7 +75,7 @@ func AdminUsersInvite(ctx context.Context, clientConfig ClientConfig, token stri
 			"guest_expiration_ts": guestExpirationTs,
 		},
 		Headers: OperationHeaders(map[string]any{
-					"token": token,
+			"token": token,
 		}),
 		ContentType: "application/x-www-form-urlencoded",
 		OperationID: "AdminUsersInvite",
@@ -88,7 +88,7 @@ func AdminUsersInvite(ctx context.Context, clientConfig ClientConfig, token stri
 
 // AdminUsersList lists users on a workspace. Provide `team_id` to select the workspace, and use `cursor` and `limit` to control cursor-based pagination. Pass the returned `next_cursor` as `cursor` to retrieve the next page.
 //
-// List users on a workspace
+// # List users on a workspace
 //
 // Parameters:
 //
@@ -105,7 +105,7 @@ func AdminUsersList(ctx context.Context, clientConfig ClientConfig, teamId strin
 			"limit":   QueryValue{Value: limit, Style: "form", Explode: true},
 		},
 		Headers: OperationHeaders(map[string]any{
-					"token": token,
+			"token": token,
 		}),
 		OperationID: "AdminUsersList",
 	})
@@ -131,7 +131,7 @@ func AdminUsersRemove(ctx context.Context, clientConfig ClientConfig, token stri
 			"user_id": userId,
 		},
 		Headers: OperationHeaders(map[string]any{
-					"token": token,
+			"token": token,
 		}),
 		ContentType: "application/x-www-form-urlencoded",
 		OperationID: "AdminUsersRemove",
@@ -158,7 +158,7 @@ func AdminUsersSetAdmin(ctx context.Context, clientConfig ClientConfig, token st
 			"user_id": userId,
 		},
 		Headers: OperationHeaders(map[string]any{
-					"token": token,
+			"token": token,
 		}),
 		ContentType: "application/x-www-form-urlencoded",
 		OperationID: "AdminUsersSetAdmin",
@@ -171,7 +171,7 @@ func AdminUsersSetAdmin(ctx context.Context, clientConfig ClientConfig, token st
 
 // AdminUsersSetExpiration sets an expiration timestamp for a guest user in a workspace. Supply `team_id`, `user_id`, and `expiration_ts` to identify the guest account and the time when it should be disabled. The authenticated user must provide an administrative token with the required write scope.
 //
-// Set an expiration for a guest user
+// # Set an expiration for a guest user
 //
 // Parameters:
 //
@@ -187,7 +187,7 @@ func AdminUsersSetExpiration(ctx context.Context, clientConfig ClientConfig, tok
 			"expiration_ts": expirationTs,
 		},
 		Headers: OperationHeaders(map[string]any{
-					"token": token,
+			"token": token,
 		}),
 		ContentType: "application/x-www-form-urlencoded",
 		OperationID: "AdminUsersSetExpiration",
@@ -214,7 +214,7 @@ func AdminUsersSetOwner(ctx context.Context, clientConfig ClientConfig, token st
 			"user_id": userId,
 		},
 		Headers: OperationHeaders(map[string]any{
-					"token": token,
+			"token": token,
 		}),
 		ContentType: "application/x-www-form-urlencoded",
 		OperationID: "AdminUsersSetOwner",
@@ -241,7 +241,7 @@ func AdminUsersSetRegular(ctx context.Context, clientConfig ClientConfig, token 
 			"user_id": userId,
 		},
 		Headers: OperationHeaders(map[string]any{
-					"token": token,
+			"token": token,
 		}),
 		ContentType: "application/x-www-form-urlencoded",
 		OperationID: "AdminUsersSetRegular",

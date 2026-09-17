@@ -24,7 +24,7 @@ func WorkflowsStepCompleted(ctx context.Context, clientConfig ClientConfig, work
 			"outputs":                  QueryValue{Value: outputs, Style: "form", Explode: true},
 		},
 		Headers: OperationHeaders(map[string]any{
-					"token": token,
+			"token": token,
 		}),
 		OperationID: "WorkflowsStepCompleted",
 	})
@@ -52,7 +52,7 @@ func WorkflowsStepFailed(ctx context.Context, clientConfig ClientConfig, workflo
 			"error":                    QueryValue{Value: error_, Style: "form", Explode: true},
 		},
 		Headers: OperationHeaders(map[string]any{
-					"token": token,
+			"token": token,
 		}),
 		OperationID: "WorkflowsStepFailed",
 	})
@@ -93,7 +93,7 @@ func WorkflowsUpdateStep(ctx context.Context, clientConfig ClientConfig, workflo
 			"step_image_url":        QueryValue{Value: stepImageUrl, Style: "form", Explode: true},
 		},
 		Headers: OperationHeaders(map[string]any{
-					"token": token,
+			"token": token,
 		}),
 		OperationID: "WorkflowsUpdateStep",
 	})

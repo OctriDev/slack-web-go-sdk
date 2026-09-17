@@ -56,7 +56,7 @@ func FilesCommentsDelete(ctx context.Context, clientConfig ClientConfig, token *
 			"id":   id,
 		},
 		Headers: OperationHeaders(map[string]any{
-					"token": token,
+			"token": token,
 		}),
 		ContentType: "application/x-www-form-urlencoded",
 		OperationID: "FilesCommentsDelete",

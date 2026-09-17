@@ -175,7 +175,7 @@ func NewUsergroupsUpdateResponse(fields UsergroupsUpdateResponse) (*UsergroupsUp
 
 // UsergroupsCreate creates a User Group for the current team. Supply a unique `name`, and optionally configure its mention `handle`, description, default channels, and user count behavior. The response returns the created User Group with its generated identity and configuration.
 //
-// Create a User Group
+// # Create a User Group
 //
 // Parameters:
 //
@@ -197,7 +197,7 @@ func UsergroupsCreate(ctx context.Context, clientConfig ClientConfig, token stri
 			"include_count": includeCount,
 		},
 		Headers: OperationHeaders(map[string]any{
-					"token": token,
+			"token": token,
 		}),
 		ContentType: "application/x-www-form-urlencoded",
 		OperationID: "UsergroupsCreate",
@@ -210,7 +210,7 @@ func UsergroupsCreate(ctx context.Context, clientConfig ClientConfig, token stri
 
 // UsergroupsDisable disables an existing User Group. Supply the encoded User Group identifier and optionally request the number of users in the returned object. The response returns the User Group after it has been disabled.
 //
-// Disable an existing User Group
+// # Disable an existing User Group
 //
 // Parameters:
 //
@@ -224,7 +224,7 @@ func UsergroupsDisable(ctx context.Context, clientConfig ClientConfig, token str
 			"include_count": includeCount,
 		},
 		Headers: OperationHeaders(map[string]any{
-					"token": token,
+			"token": token,
 		}),
 		ContentType: "application/x-www-form-urlencoded",
 		OperationID: "UsergroupsDisable",
@@ -237,7 +237,7 @@ func UsergroupsDisable(ctx context.Context, clientConfig ClientConfig, token str
 
 // UsergroupsEnable enables a disabled User Group for the team. Supply the User Group's encoded ID in `usergroup` and optionally request its member count with `include_count`.
 //
-// Enable a User Group
+// # Enable a User Group
 //
 // Parameters:
 //
@@ -251,7 +251,7 @@ func UsergroupsEnable(ctx context.Context, clientConfig ClientConfig, token stri
 			"include_count": includeCount,
 		},
 		Headers: OperationHeaders(map[string]any{
-					"token": token,
+			"token": token,
 		}),
 		ContentType: "application/x-www-form-urlencoded",
 		OperationID: "UsergroupsEnable",
@@ -264,7 +264,7 @@ func UsergroupsEnable(ctx context.Context, clientConfig ClientConfig, token stri
 
 // UsergroupsList lists the User Groups available for a team. Use the inclusion flags to return member lists, member counts, or disabled User Groups alongside the default User Group details.
 //
-// List all User Groups for a team
+// # List all User Groups for a team
 //
 // Parameters:
 //
@@ -290,7 +290,7 @@ func UsergroupsList(ctx context.Context, clientConfig ClientConfig, token string
 
 // UsergroupsUpdate updates an existing User Group's name, handle, description, default channels, or member count setting. Supply `usergroup` to identify the group, then include only the properties you want to change.
 //
-// Update an existing User Group
+// # Update an existing User Group
 //
 // Parameters:
 //
@@ -314,7 +314,7 @@ func UsergroupsUpdate(ctx context.Context, clientConfig ClientConfig, token stri
 			"name":          name,
 		},
 		Headers: OperationHeaders(map[string]any{
-					"token": token,
+			"token": token,
 		}),
 		ContentType: "application/x-www-form-urlencoded",
 		OperationID: "UsergroupsUpdate",

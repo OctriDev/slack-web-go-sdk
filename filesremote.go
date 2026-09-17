@@ -7,7 +7,7 @@ import "context"
 
 // FilesRemoteAdd adds a file hosted by a remote service. Supply the remote file identity and metadata such as `title`, `filetype`, and `external_url` to register it. You can also provide `preview_image` and searchable text in `indexable_file_contents`.
 //
-// Adds a file from a remote service
+// # Adds a file from a remote service
 //
 // Parameters:
 //
@@ -41,7 +41,7 @@ func FilesRemoteAdd(ctx context.Context, clientConfig ClientConfig, token *strin
 
 // FilesRemoteInfo retrieves information about a remote file registered with the service. Identify the file with `file` or the creator-defined `external_id`. The response confirms whether the request succeeded.
 //
-// Retrieve information about a remote file added to Slack
+// # Retrieve information about a remote file added to Slack
 //
 // Parameters:
 //
@@ -65,7 +65,7 @@ func FilesRemoteInfo(ctx context.Context, clientConfig ClientConfig, token *stri
 
 // FilesRemoteList lists remote files with optional channel and creation-time filters. Use `channel`, `ts_from`, and `ts_to` to narrow the collection, and use `limit` with `cursor` to paginate through results. The response confirms whether the request succeeded.
 //
-// Retrieve information about a remote file added to Slack
+// # Retrieve information about a remote file added to Slack
 //
 // Parameters:
 //

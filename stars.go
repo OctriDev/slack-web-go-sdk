@@ -127,7 +127,7 @@ func StarsAdd(ctx context.Context, clientConfig ClientConfig, token string, chan
 			"timestamp":    timestamp,
 		},
 		Headers: OperationHeaders(map[string]any{
-					"token": token,
+			"token": token,
 		}),
 		ContentType: "application/x-www-form-urlencoded",
 		OperationID: "StarsAdd",
@@ -190,7 +190,7 @@ func StarsRemove(ctx context.Context, clientConfig ClientConfig, token string, c
 			"timestamp":    timestamp,
 		},
 		Headers: OperationHeaders(map[string]any{
-					"token": token,
+			"token": token,
 		}),
 		ContentType: "application/x-www-form-urlencoded",
 		OperationID: "StarsRemove",

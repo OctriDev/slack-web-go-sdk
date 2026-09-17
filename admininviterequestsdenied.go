@@ -25,7 +25,7 @@ func AdminInviteRequestsDeniedList(ctx context.Context, clientConfig ClientConfi
 			"limit":   QueryValue{Value: limit, Style: "form", Explode: true},
 		},
 		Headers: OperationHeaders(map[string]any{
-					"token": token,
+			"token": token,
 		}),
 		OperationID: "AdminInviteRequestsDeniedList",
 	})

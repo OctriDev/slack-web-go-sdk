@@ -21,7 +21,7 @@ func ViewsOpen(ctx context.Context, clientConfig ClientConfig, triggerId string,
 			"view":       QueryValue{Value: view, Style: "form", Explode: true},
 		},
 		Headers: OperationHeaders(map[string]any{
-					"token": token,
+			"token": token,
 		}),
 		OperationID: "ViewsOpen",
 	})
@@ -50,7 +50,7 @@ func ViewsPublish(ctx context.Context, clientConfig ClientConfig, userId string,
 			"hash":    QueryValue{Value: hash, Style: "form", Explode: true},
 		},
 		Headers: OperationHeaders(map[string]any{
-					"token": token,
+			"token": token,
 		}),
 		OperationID: "ViewsPublish",
 	})
@@ -76,7 +76,7 @@ func ViewsPush(ctx context.Context, clientConfig ClientConfig, triggerId string,
 			"view":       QueryValue{Value: view, Style: "form", Explode: true},
 		},
 		Headers: OperationHeaders(map[string]any{
-					"token": token,
+			"token": token,
 		}),
 		OperationID: "ViewsPush",
 	})
@@ -110,7 +110,7 @@ func ViewsUpdate(ctx context.Context, clientConfig ClientConfig, token string, v
 			"hash":        QueryValue{Value: hash, Style: "form", Explode: true},
 		},
 		Headers: OperationHeaders(map[string]any{
-					"token": token,
+			"token": token,
 		}),
 		OperationID: "ViewsUpdate",
 	})

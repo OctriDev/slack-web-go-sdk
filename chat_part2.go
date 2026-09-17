@@ -50,7 +50,7 @@ func ChatScheduleMessage(ctx context.Context, clientConfig ClientConfig, token *
 			"reply_broadcast": replyBroadcast,
 		},
 		Headers: OperationHeaders(map[string]any{
-					"token": token,
+			"token": token,
 		}),
 		ContentType: "application/x-www-form-urlencoded",
 		OperationID: "ChatScheduleMessage",
@@ -63,7 +63,7 @@ func ChatScheduleMessage(ctx context.Context, clientConfig ClientConfig, token *
 
 // ChatUnfurl submits custom unfurl behavior for URLs in a user-posted message. Supply the target `channel` and message `ts`, then provide URL mappings through `unfurls` or authentication guidance through the user-authentication fields. The request requires an authentication token with the `links:write` scope.
 //
-// Provide custom unfurl behavior for user-posted URLs
+// # Provide custom unfurl behavior for user-posted URLs
 //
 // Parameters:
 //
@@ -91,7 +91,7 @@ func ChatUnfurl(ctx context.Context, clientConfig ClientConfig, token string, ch
 			"user_auth_url":      userAuthUrl,
 		},
 		Headers: OperationHeaders(map[string]any{
-					"token": token,
+			"token": token,
 		}),
 		ContentType: "application/x-www-form-urlencoded",
 		OperationID: "ChatUnfurl",
@@ -144,7 +144,7 @@ func ChatUpdate(ctx context.Context, clientConfig ClientConfig, token string, ch
 			"text":        text,
 		},
 		Headers: OperationHeaders(map[string]any{
-					"token": token,
+			"token": token,
 		}),
 		ContentType: "application/x-www-form-urlencoded",
 		OperationID: "ChatUpdate",

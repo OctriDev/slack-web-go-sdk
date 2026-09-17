@@ -22,7 +22,7 @@ func CallsParticipantsAdd(ctx context.Context, clientConfig ClientConfig, token 
 			"users": users,
 		},
 		Headers: OperationHeaders(map[string]any{
-					"token": token,
+			"token": token,
 		}),
 		ContentType: "application/x-www-form-urlencoded",
 		OperationID: "CallsParticipantsAdd",
@@ -50,7 +50,7 @@ func CallsParticipantsRemove(ctx context.Context, clientConfig ClientConfig, tok
 			"users": users,
 		},
 		Headers: OperationHeaders(map[string]any{
-					"token": token,
+			"token": token,
 		}),
 		ContentType: "application/x-www-form-urlencoded",
 		OperationID: "CallsParticipantsRemove",

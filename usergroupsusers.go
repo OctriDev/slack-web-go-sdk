@@ -76,7 +76,7 @@ func NewUsergroupsUsersUpdateResponse(fields UsergroupsUsersUpdateResponse) (*Us
 
 // UsergroupsUsersList lists the users who belong to a specified User Group. Supply `usergroup` to select the group and use `include_disabled` when results may involve disabled User Groups.
 //
-// List all users in a User Group
+// # List all users in a User Group
 //
 // Parameters:
 //
@@ -100,7 +100,7 @@ func UsergroupsUsersList(ctx context.Context, clientConfig ClientConfig, token s
 
 // UsergroupsUsersUpdate replaces the complete membership list for a User Group. Supply `usergroup` and the comma-separated `users` value; the submitted list becomes the group's entire user membership.
 //
-// Update the list of users for a User Group
+// # Update the list of users for a User Group
 //
 // Parameters:
 //
@@ -117,7 +117,7 @@ func UsergroupsUsersUpdate(ctx context.Context, clientConfig ClientConfig, token
 			"include_count": includeCount,
 		},
 		Headers: OperationHeaders(map[string]any{
-					"token": token,
+			"token": token,
 		}),
 		ContentType: "application/x-www-form-urlencoded",
 		OperationID: "UsergroupsUsersUpdate",

@@ -159,7 +159,7 @@ func NewDndSetSnoozeResponse(fields DndSetSnoozeResponse) (*DndSetSnoozeResponse
 func DndEndDnd(ctx context.Context, clientConfig ClientConfig, token string) (*DndEndDndResponse, error) {
 	resp, err := DoCfg[DndEndDndResponse](ctx, &clientConfig, "POST", "/dnd.endDnd", &RequestOpts{
 		Headers: OperationHeaders(map[string]any{
-					"token": token,
+			"token": token,
 		}),
 		OperationID: "DndEndDnd",
 	})
@@ -179,7 +179,7 @@ func DndEndDnd(ctx context.Context, clientConfig ClientConfig, token string) (*D
 func DndEndSnooze(ctx context.Context, clientConfig ClientConfig, token string) (*DndEndSnoozeResponse, error) {
 	resp, err := DoCfg[DndEndSnoozeResponse](ctx, &clientConfig, "POST", "/dnd.endSnooze", &RequestOpts{
 		Headers: OperationHeaders(map[string]any{
-					"token": token,
+			"token": token,
 		}),
 		OperationID: "DndEndSnooze",
 	})

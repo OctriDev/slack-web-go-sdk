@@ -7,7 +7,7 @@ import "context"
 
 // AdminTeamsSettingsInfo retrieves settings information for a specified workspace. Provide `team_id` to identify the workspace whose settings you want to inspect. Authenticate with a token that has the `admin.teams:read` scope.
 //
-// Fetch information about settings in a workspace
+// # Fetch information about settings in a workspace
 //
 // Parameters:
 //
@@ -18,7 +18,7 @@ func AdminTeamsSettingsInfo(ctx context.Context, clientConfig ClientConfig, team
 			"team_id": QueryValue{Value: teamId, Style: "form", Explode: true},
 		},
 		Headers: OperationHeaders(map[string]any{
-					"token": token,
+			"token": token,
 		}),
 		OperationID: "AdminTeamsSettingsInfo",
 	})
@@ -69,7 +69,7 @@ func AdminTeamsSettingsSetDescription(ctx context.Context, clientConfig ClientCo
 			"description": description,
 		},
 		Headers: OperationHeaders(map[string]any{
-					"token": token,
+			"token": token,
 		}),
 		ContentType: "application/x-www-form-urlencoded",
 		OperationID: "AdminTeamsSettingsSetDescription",
@@ -82,7 +82,7 @@ func AdminTeamsSettingsSetDescription(ctx context.Context, clientConfig ClientCo
 
 // AdminTeamsSettingsSetDiscoverability sets the discoverability setting for a specified workspace. Supply `team_id` and choose the workspace's new `discoverability` value. The value must be `open`, `invite_only`, `closed`, or `unlisted`.
 //
-// An API method that allows admins to set the discoverability of a given workspace
+// # An API method that allows admins to set the discoverability of a given workspace
 //
 // Parameters:
 //
@@ -97,7 +97,7 @@ func AdminTeamsSettingsSetDiscoverability(ctx context.Context, clientConfig Clie
 			"discoverability": discoverability,
 		},
 		Headers: OperationHeaders(map[string]any{
-					"token": token,
+			"token": token,
 		}),
 		ContentType: "application/x-www-form-urlencoded",
 		OperationID: "AdminTeamsSettingsSetDiscoverability",
@@ -149,7 +149,7 @@ func AdminTeamsSettingsSetName(ctx context.Context, clientConfig ClientConfig, t
 			"name":    name,
 		},
 		Headers: OperationHeaders(map[string]any{
-					"token": token,
+			"token": token,
 		}),
 		ContentType: "application/x-www-form-urlencoded",
 		OperationID: "AdminTeamsSettingsSetName",

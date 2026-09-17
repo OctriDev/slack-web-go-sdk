@@ -217,7 +217,7 @@ func AppsPermissionsInfo(ctx context.Context, clientConfig ClientConfig, token *
 
 // AppsPermissionsRequest requests additional permissions for an app using a permissions trigger. Supply the requested scopes and the trigger token to start the permission request flow. The authenticated user must provide a token and a valid `trigger_id` accepted by the permissions API.
 //
-// Allows an app to request additional scopes
+// # Allows an app to request additional scopes
 //
 // Parameters:
 //

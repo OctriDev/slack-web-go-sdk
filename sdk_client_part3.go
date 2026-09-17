@@ -96,12 +96,21 @@ func StreamCfgWithFormat(ctx context.Context, cfg *ClientConfig, method, path st
 				n, readErr := resp.Body.Read(chunk)
 				if n > 0 {
 					data := ""
-					if chunkDomain == "text" { data = string(chunk[:n]) }
-					if chunkDomain != "text" { data = string(chunk[:n]) }
+					if chunkDomain == "text" {
+						data = string(chunk[:n])
+					}
+					if chunkDomain != "text" {
+						data = string(chunk[:n])
+					}
 					events <- SdkStreamEvent{Event: "chunk", Data: data}
 				}
-				if readErr == io.EOF { return }
-				if readErr != nil { errs <- &SdkNetworkError{Cause: readErr}; return }
+				if readErr == io.EOF {
+					return
+				}
+				if readErr != nil {
+					errs <- &SdkNetworkError{Cause: readErr}
+					return
+				}
 			}
 		}
 		reader := bufio.NewReader(resp.Body)
@@ -109,9 +118,16 @@ func StreamCfgWithFormat(ctx context.Context, cfg *ClientConfig, method, path st
 			for {
 				line, readErr := reader.ReadString('\n')
 				line = strings.TrimSpace(line)
-				if line != "" { events <- SdkStreamEvent{Event: "message", Data: line} }
-				if readErr == io.EOF { return }
-				if readErr != nil { errs <- &SdkNetworkError{Cause: readErr}; return }
+				if line != "" {
+					events <- SdkStreamEvent{Event: "message", Data: line}
+				}
+				if readErr == io.EOF {
+					return
+				}
+				if readErr != nil {
+					errs <- &SdkNetworkError{Cause: readErr}
+					return
+				}
 			}
 		}
 		var (
@@ -239,9 +255,18 @@ func StreamTypedCfgWithFormat[T any](ctx context.Context, cfg *ClientConfig, met
 				var encoded []byte
 				if streamFormat == "chunked" {
 					var err error
-					if chunkDomain == "text" { encoded, err = json.Marshal(ev.Data) } else { encoded, err = json.Marshal([]byte(ev.Data)) }
-					if err != nil { errs <- err; return }
-				} else { encoded = []byte(ev.Data) }
+					if chunkDomain == "text" {
+						encoded, err = json.Marshal(ev.Data)
+					} else {
+						encoded, err = json.Marshal([]byte(ev.Data))
+					}
+					if err != nil {
+						errs <- err
+						return
+					}
+				} else {
+					encoded = []byte(ev.Data)
+				}
 				var typed T
 				if err := json.Unmarshal(encoded, &typed); err != nil {
 					errs <- err
@@ -341,7 +366,7 @@ func WaitFor[T any](ctx context.Context, poll func(context.Context) (T, error), 
 	}
 }
 
-var piiKeys = map[string]struct{}{"authorization": {}, "cookie": {}, "set_cookie": {}, "setcookie": {}, "password": {}, "passcode": {}, "secret": {}, "token": {}, "api_key": {}, "apikey": {}, "access_token": {}, "accesstoken": {}, "refresh_token": {}, "refreshtoken": {}, "client_secret": {}, "clientsecret": {}, "email": {}, "email_address": {}, "emailaddress": {}, "phone": {}, "phone_number": {}, "phonenumber": {}, "address": {}, "street_address": {}, "streetaddress": {}, "street": {}, "city": {}, "postal_code": {}, "postalcode": {}, "zip_code": {}, "zipcode": {}, "first_name": {}, "firstname": {}, "last_name": {}, "lastname": {}, "full_name": {}, "fullname": {}, "username": {}, "user_name": {}, "ip": {}, "ip_address": {}, "ipaddress": {}, "user_agent": {}, "useragent": {}, "referrer": {}, "url": {}, "uri": {}, "query": {}, "latitude": {}, "longitude": {}, "ssn": {}, "social_security_number": {}, "socialsecuritynumber": {}, "tax_id": {}, "taxid": {}, "national_id": {}, "nationalid": {}, "passport_number": {}, "passportnumber": {}, "date_of_birth": {}, "dateofbirth": {}, "birth_date": {}, "birthdate": {}, "headers": {}, "body": {}, "request_headers": {}, "requestheaders": {}, "request_body": {}, "requestbody": {},}
+var piiKeys = map[string]struct{}{"authorization": {}, "cookie": {}, "set_cookie": {}, "setcookie": {}, "password": {}, "passcode": {}, "secret": {}, "token": {}, "api_key": {}, "apikey": {}, "access_token": {}, "accesstoken": {}, "refresh_token": {}, "refreshtoken": {}, "client_secret": {}, "clientsecret": {}, "email": {}, "email_address": {}, "emailaddress": {}, "phone": {}, "phone_number": {}, "phonenumber": {}, "address": {}, "street_address": {}, "streetaddress": {}, "street": {}, "city": {}, "postal_code": {}, "postalcode": {}, "zip_code": {}, "zipcode": {}, "first_name": {}, "firstname": {}, "last_name": {}, "lastname": {}, "full_name": {}, "fullname": {}, "username": {}, "user_name": {}, "ip": {}, "ip_address": {}, "ipaddress": {}, "user_agent": {}, "useragent": {}, "referrer": {}, "url": {}, "uri": {}, "query": {}, "latitude": {}, "longitude": {}, "ssn": {}, "social_security_number": {}, "socialsecuritynumber": {}, "tax_id": {}, "taxid": {}, "national_id": {}, "nationalid": {}, "passport_number": {}, "passportnumber": {}, "date_of_birth": {}, "dateofbirth": {}, "birth_date": {}, "birthdate": {}, "headers": {}, "body": {}, "request_headers": {}, "requestheaders": {}, "request_body": {}, "requestbody": {}}
 
 func normalizePiiKey(key string) string {
 	return strings.NewReplacer("-", "_", " ", "_").Replace(strings.ToLower(key))

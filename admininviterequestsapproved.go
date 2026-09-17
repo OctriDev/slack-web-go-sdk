@@ -25,7 +25,7 @@ func AdminInviteRequestsApprovedList(ctx context.Context, clientConfig ClientCon
 			"limit":   QueryValue{Value: limit, Style: "form", Explode: true},
 		},
 		Headers: OperationHeaders(map[string]any{
-					"token": token,
+			"token": token,
 		}),
 		OperationID: "AdminInviteRequestsApprovedList",
 	})

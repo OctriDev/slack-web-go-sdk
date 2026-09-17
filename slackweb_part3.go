@@ -80,7 +80,7 @@ func (sdk *ChatNamespace) DeleteScheduledMessage(ctx context.Context, token stri
 
 // GetPermalink retrieves a permalink for a specific message in a conversation or channel. Supply `channel` and the message's `message_ts` value to identify the message, together with the authentication `token`. Use the returned URI to link directly to that message.
 //
-// Retrieve a permalink URL for a specific extant message
+// # Retrieve a permalink URL for a specific extant message
 //
 // Parameters:
 //
@@ -216,7 +216,7 @@ func (sdk *ChatNamespace) ScheduleMessage(ctx context.Context, token *string, ch
 
 // Unfurl submits custom unfurl behavior for URLs in a user-posted message. Supply the target `channel` and message `ts`, then provide URL mappings through `unfurls` or authentication guidance through the user-authentication fields. The request requires an authentication token with the `links:write` scope.
 //
-// Provide custom unfurl behavior for user-posted URLs
+// # Provide custom unfurl behavior for user-posted URLs
 //
 // Parameters:
 //
@@ -334,7 +334,7 @@ func (sdk *ConversationsNamespace) Close(ctx context.Context, token *string, cha
 
 // Create creates a public or private channel-based conversation. Provide `name` for the channel name and set `is_private` to `true` when the conversation should be private. The response contains the created conversation object.
 //
-// Initiates a public or private channel-based conversation
+// # Initiates a public or private channel-based conversation
 //
 // Parameters:
 //
@@ -522,7 +522,7 @@ func (sdk *ConversationsNamespace) Rename(ctx context.Context, token *string, ch
 
 // Replies retrieves the messages in a conversation thread. Use `channel` and the parent message timestamp in `ts` to identify the thread, and use time bounds, `limit`, or `cursor` to control the returned messages.
 //
-// Retrieve a thread of messages posted to a conversation
+// # Retrieve a thread of messages posted to a conversation
 //
 // Parameters:
 //
@@ -597,7 +597,7 @@ func NewDialogNamespace(config ClientConfig) *DialogNamespace {
 
 // Open opens a dialog for a user by exchanging a trigger for a dialog submission. Provide the JSON-encoded `dialog` definition and the `trigger_id` issued for the interaction.
 //
-// Open a dialog with a user
+// # Open a dialog with a user
 //
 // Parameters:
 //

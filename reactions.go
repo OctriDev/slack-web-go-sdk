@@ -125,7 +125,7 @@ func ReactionsAdd(ctx context.Context, clientConfig ClientConfig, token string, 
 			"timestamp": timestamp,
 		},
 		Headers: OperationHeaders(map[string]any{
-					"token": token,
+			"token": token,
 		}),
 		ContentType: "application/x-www-form-urlencoded",
 		OperationID: "ReactionsAdd",
@@ -223,7 +223,7 @@ func ReactionsRemove(ctx context.Context, clientConfig ClientConfig, token strin
 			"timestamp":    timestamp,
 		},
 		Headers: OperationHeaders(map[string]any{
-					"token": token,
+			"token": token,
 		}),
 		ContentType: "application/x-www-form-urlencoded",
 		OperationID: "ReactionsRemove",

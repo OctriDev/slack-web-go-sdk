@@ -40,7 +40,7 @@ func CallsAdd(ctx context.Context, clientConfig ClientConfig, token string, exte
 			"users":                users,
 		},
 		Headers: OperationHeaders(map[string]any{
-					"token": token,
+			"token": token,
 		}),
 		ContentType: "application/x-www-form-urlencoded",
 		OperationID: "CallsAdd",
@@ -67,7 +67,7 @@ func CallsEnd(ctx context.Context, clientConfig ClientConfig, token string, id s
 			"duration": duration,
 		},
 		Headers: OperationHeaders(map[string]any{
-					"token": token,
+			"token": token,
 		}),
 		ContentType: "application/x-www-form-urlencoded",
 		OperationID: "CallsEnd",
@@ -92,7 +92,7 @@ func CallsInfo(ctx context.Context, clientConfig ClientConfig, id string, token 
 			"id": QueryValue{Value: id, Style: "form", Explode: true},
 		},
 		Headers: OperationHeaders(map[string]any{
-					"token": token,
+			"token": token,
 		}),
 		OperationID: "CallsInfo",
 	})
@@ -123,7 +123,7 @@ func CallsUpdate(ctx context.Context, clientConfig ClientConfig, token string, i
 			"desktop_app_join_url": desktopAppJoinUrl,
 		},
 		Headers: OperationHeaders(map[string]any{
-					"token": token,
+			"token": token,
 		}),
 		ContentType: "application/x-www-form-urlencoded",
 		OperationID: "CallsUpdate",

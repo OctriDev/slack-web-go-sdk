@@ -277,7 +277,7 @@ func UsersConversations(ctx context.Context, clientConfig ClientConfig, token *s
 
 // UsersDeletePhoto deletes the profile photo associated with the authenticated user. Send the required authentication token in the form body to authorize removal of the current photo.
 //
-// Delete the user profile photo
+// # Delete the user profile photo
 //
 // Parameters:
 //
@@ -429,7 +429,7 @@ func UsersLookupByEmail(ctx context.Context, clientConfig ClientConfig, token st
 func UsersSetActive(ctx context.Context, clientConfig ClientConfig, token string) (*UsersSetActiveResponse, error) {
 	resp, err := DoCfg[UsersSetActiveResponse](ctx, &clientConfig, "POST", "/users.setActive", &RequestOpts{
 		Headers: OperationHeaders(map[string]any{
-					"token": token,
+			"token": token,
 		}),
 		OperationID: "UsersSetActive",
 	})
@@ -441,7 +441,7 @@ func UsersSetActive(ctx context.Context, clientConfig ClientConfig, token string
 
 // UsersSetPhoto updates a user's profile photo. Submit the image with optional crop coordinates and dimensions, using the authentication token included in the form.
 //
-// Set the user profile photo
+// # Set the user profile photo
 //
 // Parameters:
 //
@@ -482,7 +482,7 @@ func UsersSetPresence(ctx context.Context, clientConfig ClientConfig, token stri
 			"presence": presence,
 		},
 		Headers: OperationHeaders(map[string]any{
-					"token": token,
+			"token": token,
 		}),
 		ContentType: "application/x-www-form-urlencoded",
 		OperationID: "UsersSetPresence",

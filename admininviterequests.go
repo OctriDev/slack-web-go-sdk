@@ -21,7 +21,7 @@ func AdminInviteRequestsApprove(ctx context.Context, clientConfig ClientConfig, 
 			"team_id":           teamId,
 		},
 		Headers: OperationHeaders(map[string]any{
-					"token": token,
+			"token": token,
 		}),
 		ContentType: "application/x-www-form-urlencoded",
 		OperationID: "AdminInviteRequestsApprove",
@@ -48,7 +48,7 @@ func AdminInviteRequestsDeny(ctx context.Context, clientConfig ClientConfig, tok
 			"team_id":           teamId,
 		},
 		Headers: OperationHeaders(map[string]any{
-					"token": token,
+			"token": token,
 		}),
 		ContentType: "application/x-www-form-urlencoded",
 		OperationID: "AdminInviteRequestsDeny",
@@ -79,7 +79,7 @@ func AdminInviteRequestsList(ctx context.Context, clientConfig ClientConfig, tok
 			"limit":   QueryValue{Value: limit, Style: "form", Explode: true},
 		},
 		Headers: OperationHeaders(map[string]any{
-					"token": token,
+			"token": token,
 		}),
 		OperationID: "AdminInviteRequestsList",
 	})

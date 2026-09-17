@@ -23,7 +23,7 @@ func AdminUsergroupsAddChannels(ctx context.Context, clientConfig ClientConfig, 
 			"team_id":      teamId,
 		},
 		Headers: OperationHeaders(map[string]any{
-					"token": token,
+			"token": token,
 		}),
 		ContentType: "application/x-www-form-urlencoded",
 		OperationID: "AdminUsergroupsAddChannels",
@@ -54,7 +54,7 @@ func AdminUsergroupsAddTeams(ctx context.Context, clientConfig ClientConfig, tok
 			"auto_provision": autoProvision,
 		},
 		Headers: OperationHeaders(map[string]any{
-					"token": token,
+			"token": token,
 		}),
 		ContentType: "application/x-www-form-urlencoded",
 		OperationID: "AdminUsergroupsAddTeams",
@@ -84,7 +84,7 @@ func AdminUsergroupsListChannels(ctx context.Context, clientConfig ClientConfig,
 			"include_num_members": QueryValue{Value: includeNumMembers, Style: "form", Explode: true},
 		},
 		Headers: OperationHeaders(map[string]any{
-					"token": token,
+			"token": token,
 		}),
 		OperationID: "AdminUsergroupsListChannels",
 	})
@@ -110,7 +110,7 @@ func AdminUsergroupsRemoveChannels(ctx context.Context, clientConfig ClientConfi
 			"channel_ids":  channelIds,
 		},
 		Headers: OperationHeaders(map[string]any{
-					"token": token,
+			"token": token,
 		}),
 		ContentType: "application/x-www-form-urlencoded",
 		OperationID: "AdminUsergroupsRemoveChannels",

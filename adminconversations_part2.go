@@ -20,7 +20,7 @@ func AdminConversationsRename(ctx context.Context, clientConfig ClientConfig, to
 			"name":       name,
 		},
 		Headers: OperationHeaders(map[string]any{
-					"token": token,
+			"token": token,
 		}),
 		ContentType: "application/x-www-form-urlencoded",
 		OperationID: "AdminConversationsRename",
@@ -67,7 +67,7 @@ func AdminConversationsSearch(ctx context.Context, clientConfig ClientConfig, to
 			"sort_dir":             QueryValue{Value: sortDir, Style: "form", Explode: true},
 		},
 		Headers: OperationHeaders(map[string]any{
-					"token": token,
+			"token": token,
 		}),
 		OperationID: "AdminConversationsSearch",
 	})
@@ -125,8 +125,8 @@ func AdminConversationsSearchPaginated(ctx context.Context, clientConfig ClientC
 }
 
 type AdminConversationsSearchPage struct {
-	Data *AdminConversationsSearchResponse
-	Items []ObjsChannel
+	Data    *AdminConversationsSearchResponse
+	Items   []ObjsChannel
 	HasMore bool
 }
 
@@ -168,7 +168,7 @@ func AdminConversationsSetConversationPrefs(ctx context.Context, clientConfig Cl
 			"prefs":      prefs,
 		},
 		Headers: OperationHeaders(map[string]any{
-					"token": token,
+			"token": token,
 		}),
 		ContentType: "application/x-www-form-urlencoded",
 		OperationID: "AdminConversationsSetConversationPrefs",
@@ -201,7 +201,7 @@ func AdminConversationsSetTeams(ctx context.Context, clientConfig ClientConfig, 
 			"org_channel":     orgChannel,
 		},
 		Headers: OperationHeaders(map[string]any{
-					"token": token,
+			"token": token,
 		}),
 		ContentType: "application/x-www-form-urlencoded",
 		OperationID: "AdminConversationsSetTeams",
@@ -226,7 +226,7 @@ func AdminConversationsUnarchive(ctx context.Context, clientConfig ClientConfig,
 			"channel_id": channelId,
 		},
 		Headers: OperationHeaders(map[string]any{
-					"token": token,
+			"token": token,
 		}),
 		ContentType: "application/x-www-form-urlencoded",
 		OperationID: "AdminConversationsUnarchive",

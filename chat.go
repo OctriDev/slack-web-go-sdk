@@ -445,7 +445,7 @@ func ChatDelete(ctx context.Context, clientConfig ClientConfig, token *string, t
 			"as_user": asUser,
 		},
 		Headers: OperationHeaders(map[string]any{
-					"token": token,
+			"token": token,
 		}),
 		ContentType: "application/x-www-form-urlencoded",
 		OperationID: "ChatDelete",
@@ -478,7 +478,7 @@ func ChatDeleteScheduledMessage(ctx context.Context, clientConfig ClientConfig, 
 			"as_user":              asUser,
 		},
 		Headers: OperationHeaders(map[string]any{
-					"token": token,
+			"token": token,
 		}),
 		ContentType: "application/x-www-form-urlencoded",
 		OperationID: "ChatDeleteScheduledMessage",
@@ -491,7 +491,7 @@ func ChatDeleteScheduledMessage(ctx context.Context, clientConfig ClientConfig, 
 
 // ChatGetPermalink retrieves a permalink for a specific message in a conversation or channel. Supply `channel` and the message's `message_ts` value to identify the message, together with the authentication `token`. Use the returned URI to link directly to that message.
 //
-// Retrieve a permalink URL for a specific extant message
+// # Retrieve a permalink URL for a specific extant message
 //
 // Parameters:
 //
@@ -530,7 +530,7 @@ func ChatMeMessage(ctx context.Context, clientConfig ClientConfig, token *string
 			"text":    text,
 		},
 		Headers: OperationHeaders(map[string]any{
-					"token": token,
+			"token": token,
 		}),
 		ContentType: "application/x-www-form-urlencoded",
 		OperationID: "ChatMeMessage",
@@ -591,7 +591,7 @@ func ChatPostEphemeral(ctx context.Context, clientConfig ClientConfig, token str
 			"username":    username,
 		},
 		Headers: OperationHeaders(map[string]any{
-					"token": token,
+			"token": token,
 		}),
 		ContentType: "application/x-www-form-urlencoded",
 		OperationID: "ChatPostEphemeral",
@@ -658,7 +658,7 @@ func ChatPostMessage(ctx context.Context, clientConfig ClientConfig, token strin
 			"username":        username,
 		},
 		Headers: OperationHeaders(map[string]any{
-					"token": token,
+			"token": token,
 		}),
 		ContentType: "application/x-www-form-urlencoded",
 		OperationID: "ChatPostMessage",

@@ -26,7 +26,7 @@ func AdminTeamsCreate(ctx context.Context, clientConfig ClientConfig, token stri
 			"team_discoverability": teamDiscoverability,
 		},
 		Headers: OperationHeaders(map[string]any{
-					"token": token,
+			"token": token,
 		}),
 		ContentType: "application/x-www-form-urlencoded",
 		OperationID: "AdminTeamsCreate",
@@ -39,7 +39,7 @@ func AdminTeamsCreate(ctx context.Context, clientConfig ClientConfig, token stri
 
 // AdminTeamsList lists all teams in an Enterprise organization. Use `cursor` to retrieve subsequent pages and `limit` to control the number of teams returned per request. Authenticate with a token that has the `admin.teams:read` scope.
 //
-// List all teams on an Enterprise organization
+// # List all teams on an Enterprise organization
 //
 // Parameters:
 //
@@ -55,7 +55,7 @@ func AdminTeamsList(ctx context.Context, clientConfig ClientConfig, token string
 			"cursor": QueryValue{Value: cursor, Style: "form", Explode: true},
 		},
 		Headers: OperationHeaders(map[string]any{
-					"token": token,
+			"token": token,
 		}),
 		OperationID: "AdminTeamsList",
 	})

@@ -20,7 +20,7 @@ func AdminUsersSessionInvalidate(ctx context.Context, clientConfig ClientConfig,
 			"session_id": sessionId,
 		},
 		Headers: OperationHeaders(map[string]any{
-					"token": token,
+			"token": token,
 		}),
 		ContentType: "application/x-www-form-urlencoded",
 		OperationID: "AdminUsersSessionInvalidate",
@@ -33,7 +33,7 @@ func AdminUsersSessionInvalidate(ctx context.Context, clientConfig ClientConfig,
 
 // AdminUsersSessionReset invalidates all valid sessions for a specified user across all devices. Supply `user_id` and optionally limit invalidation to mobile or web sessions with `mobile_only` or `web_only`. The authenticated user must provide an administrative token with the required write scope.
 //
-// Wipes all valid sessions on all devices for a given user
+// # Wipes all valid sessions on all devices for a given user
 //
 // Parameters:
 //
@@ -49,7 +49,7 @@ func AdminUsersSessionReset(ctx context.Context, clientConfig ClientConfig, toke
 			"web_only":    webOnly,
 		},
 		Headers: OperationHeaders(map[string]any{
-					"token": token,
+			"token": token,
 		}),
 		ContentType: "application/x-www-form-urlencoded",
 		OperationID: "AdminUsersSessionReset",

@@ -132,7 +132,7 @@ func ChatScheduledMessagesList(ctx context.Context, clientConfig ClientConfig, c
 			"cursor":  QueryValue{Value: cursor, Style: "form", Explode: true},
 		},
 		Headers: OperationHeaders(map[string]any{
-					"token": token,
+			"token": token,
 		}),
 		OperationID: "ChatScheduledMessagesList",
 	})

@@ -22,7 +22,7 @@ func AdminAppsApprove(ctx context.Context, clientConfig ClientConfig, token stri
 			"team_id":    teamId,
 		},
 		Headers: OperationHeaders(map[string]any{
-					"token": token,
+			"token": token,
 		}),
 		ContentType: "application/x-www-form-urlencoded",
 		OperationID: "AdminAppsApprove",
@@ -50,7 +50,7 @@ func AdminAppsRestrict(ctx context.Context, clientConfig ClientConfig, token str
 			"team_id":    teamId,
 		},
 		Headers: OperationHeaders(map[string]any{
-					"token": token,
+			"token": token,
 		}),
 		ContentType: "application/x-www-form-urlencoded",
 		OperationID: "AdminAppsRestrict",

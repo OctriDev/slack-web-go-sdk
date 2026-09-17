@@ -20,7 +20,7 @@ func AppsEventAuthorizationsList(ctx context.Context, clientConfig ClientConfig,
 			"limit":         QueryValue{Value: limit, Style: "form", Explode: true},
 		},
 		Headers: OperationHeaders(map[string]any{
-					"token": token,
+			"token": token,
 		}),
 		OperationID: "AppsEventAuthorizationsList",
 	})

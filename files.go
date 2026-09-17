@@ -233,7 +233,7 @@ func FilesDelete(ctx context.Context, clientConfig ClientConfig, token *string, 
 			"file": file,
 		},
 		Headers: OperationHeaders(map[string]any{
-					"token": token,
+			"token": token,
 		}),
 		ContentType: "application/x-www-form-urlencoded",
 		OperationID: "FilesDelete",
@@ -329,7 +329,7 @@ func FilesRevokePublicURL(ctx context.Context, clientConfig ClientConfig, token 
 			"file": file,
 		},
 		Headers: OperationHeaders(map[string]any{
-					"token": token,
+			"token": token,
 		}),
 		ContentType: "application/x-www-form-urlencoded",
 		OperationID: "FilesRevokePublicURL",
@@ -354,7 +354,7 @@ func FilesSharedPublicURL(ctx context.Context, clientConfig ClientConfig, token 
 			"file": file,
 		},
 		Headers: OperationHeaders(map[string]any{
-					"token": token,
+			"token": token,
 		}),
 		ContentType: "application/x-www-form-urlencoded",
 		OperationID: "FilesSharedPublicURL",

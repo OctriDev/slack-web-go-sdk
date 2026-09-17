@@ -477,7 +477,7 @@ func AdminConversationsArchive(ctx context.Context, clientConfig ClientConfig, t
 			"channel_id": channelId,
 		},
 		Headers: OperationHeaders(map[string]any{
-					"token": token,
+			"token": token,
 		}),
 		ContentType: "application/x-www-form-urlencoded",
 		OperationID: "AdminConversationsArchive",
@@ -502,7 +502,7 @@ func AdminConversationsConvertToPrivate(ctx context.Context, clientConfig Client
 			"channel_id": channelId,
 		},
 		Headers: OperationHeaders(map[string]any{
-					"token": token,
+			"token": token,
 		}),
 		ContentType: "application/x-www-form-urlencoded",
 		OperationID: "AdminConversationsConvertToPrivate",
@@ -539,7 +539,7 @@ func AdminConversationsCreate(ctx context.Context, clientConfig ClientConfig, to
 			"team_id":     teamId,
 		},
 		Headers: OperationHeaders(map[string]any{
-					"token": token,
+			"token": token,
 		}),
 		ContentType: "application/x-www-form-urlencoded",
 		OperationID: "AdminConversationsCreate",
@@ -564,7 +564,7 @@ func AdminConversationsDelete(ctx context.Context, clientConfig ClientConfig, to
 			"channel_id": channelId,
 		},
 		Headers: OperationHeaders(map[string]any{
-					"token": token,
+			"token": token,
 		}),
 		ContentType: "application/x-www-form-urlencoded",
 		OperationID: "AdminConversationsDelete",
@@ -592,7 +592,7 @@ func AdminConversationsDisconnectShared(ctx context.Context, clientConfig Client
 			"leaving_team_ids": leavingTeamIds,
 		},
 		Headers: OperationHeaders(map[string]any{
-					"token": token,
+			"token": token,
 		}),
 		ContentType: "application/x-www-form-urlencoded",
 		OperationID: "AdminConversationsDisconnectShared",
@@ -617,7 +617,7 @@ func AdminConversationsGetConversationPrefs(ctx context.Context, clientConfig Cl
 			"channel_id": QueryValue{Value: channelId, Style: "form", Explode: true},
 		},
 		Headers: OperationHeaders(map[string]any{
-					"token": token,
+			"token": token,
 		}),
 		OperationID: "AdminConversationsGetConversationPrefs",
 	})
@@ -648,7 +648,7 @@ func AdminConversationsGetTeams(ctx context.Context, clientConfig ClientConfig, 
 			"limit":      QueryValue{Value: limit, Style: "form", Explode: true},
 		},
 		Headers: OperationHeaders(map[string]any{
-					"token": token,
+			"token": token,
 		}),
 		OperationID: "AdminConversationsGetTeams",
 	})
@@ -674,7 +674,7 @@ func AdminConversationsInvite(ctx context.Context, clientConfig ClientConfig, to
 			"channel_id": channelId,
 		},
 		Headers: OperationHeaders(map[string]any{
-					"token": token,
+			"token": token,
 		}),
 		ContentType: "application/x-www-form-urlencoded",
 		OperationID: "AdminConversationsInvite",

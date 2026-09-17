@@ -192,7 +192,7 @@ func RemindersAdd(ctx context.Context, clientConfig ClientConfig, token string, 
 			"user": user,
 		},
 		Headers: OperationHeaders(map[string]any{
-					"token": token,
+			"token": token,
 		}),
 		ContentType: "application/x-www-form-urlencoded",
 		OperationID: "RemindersAdd",
@@ -217,7 +217,7 @@ func RemindersComplete(ctx context.Context, clientConfig ClientConfig, token *st
 			"reminder": reminder,
 		},
 		Headers: OperationHeaders(map[string]any{
-					"token": token,
+			"token": token,
 		}),
 		ContentType: "application/x-www-form-urlencoded",
 		OperationID: "RemindersComplete",
@@ -242,7 +242,7 @@ func RemindersDelete(ctx context.Context, clientConfig ClientConfig, token *stri
 			"reminder": reminder,
 		},
 		Headers: OperationHeaders(map[string]any{
-					"token": token,
+			"token": token,
 		}),
 		ContentType: "application/x-www-form-urlencoded",
 		OperationID: "RemindersDelete",

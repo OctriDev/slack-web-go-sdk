@@ -88,7 +88,7 @@ func PinsAdd(ctx context.Context, clientConfig ClientConfig, token string, chann
 			"timestamp": timestamp,
 		},
 		Headers: OperationHeaders(map[string]any{
-					"token": token,
+			"token": token,
 		}),
 		ContentType: "application/x-www-form-urlencoded",
 		OperationID: "PinsAdd",
@@ -137,7 +137,7 @@ func PinsRemove(ctx context.Context, clientConfig ClientConfig, token string, ch
 			"timestamp": timestamp,
 		},
 		Headers: OperationHeaders(map[string]any{
-					"token": token,
+			"token": token,
 		}),
 		ContentType: "application/x-www-form-urlencoded",
 		OperationID: "PinsRemove",

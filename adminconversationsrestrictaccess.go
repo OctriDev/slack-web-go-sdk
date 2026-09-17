@@ -7,7 +7,7 @@ import "context"
 
 // AdminConversationsRestrictAccessAddGroup adds an identity-provider group to the allowlist for a private channel. Supply `group_id` and `channel_id` in the form-encoded request body, and include `team_id` when the channel is tied to one workspace. The group controls which users can access the channel.
 //
-// Add an allowlist of IDP groups for accessing a channel
+// # Add an allowlist of IDP groups for accessing a channel
 //
 // Parameters:
 //
@@ -39,7 +39,7 @@ func AdminConversationsRestrictAccessAddGroup(ctx context.Context, clientConfig 
 
 // AdminConversationsRestrictAccessListGroups lists the identity-provider groups linked to a channel. Supply `channel_id` to identify the channel and include `team_id` when the channel exists only in one workspace. Use a token with the administrative read scope.
 //
-// List all IDP Groups linked to a channel
+// # List all IDP Groups linked to a channel
 //
 // Parameters:
 //
@@ -64,7 +64,7 @@ func AdminConversationsRestrictAccessListGroups(ctx context.Context, clientConfi
 
 // AdminConversationsRestrictAccessRemoveGroup removes an identity-provider group from a private channel's allowlist. Supply `team_id`, `group_id`, and `channel_id` in the form-encoded request body to identify the workspace, group, and channel. Use a token with the administrative write scope.
 //
-// Remove a linked IDP group linked from a private channel
+// # Remove a linked IDP group linked from a private channel
 //
 // Parameters:
 //

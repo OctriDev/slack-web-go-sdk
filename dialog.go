@@ -42,7 +42,7 @@ func NewDialogOpenResponse(fields DialogOpenResponse) (*DialogOpenResponse, erro
 
 // DialogOpen opens a dialog for a user by exchanging a trigger for a dialog submission. Provide the JSON-encoded `dialog` definition and the `trigger_id` issued for the interaction.
 //
-// Open a dialog with a user
+// # Open a dialog with a user
 //
 // Parameters:
 //
@@ -56,7 +56,7 @@ func DialogOpen(ctx context.Context, clientConfig ClientConfig, dialog string, t
 			"trigger_id": QueryValue{Value: triggerId, Style: "form", Explode: true},
 		},
 		Headers: OperationHeaders(map[string]any{
-					"token": token,
+			"token": token,
 		}),
 		OperationID: "DialogOpen",
 	})

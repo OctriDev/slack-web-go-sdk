@@ -54,7 +54,7 @@ func NewUsergroupsNamespace(config ClientConfig) *UsergroupsNamespace {
 
 // Create creates a User Group for the current team. Supply a unique `name`, and optionally configure its mention `handle`, description, default channels, and user count behavior. The response returns the created User Group with its generated identity and configuration.
 //
-// Create a User Group
+// # Create a User Group
 //
 // Parameters:
 //
@@ -72,7 +72,7 @@ func (sdk *UsergroupsNamespace) Create(ctx context.Context, token string, name s
 
 // Disable disables an existing User Group. Supply the encoded User Group identifier and optionally request the number of users in the returned object. The response returns the User Group after it has been disabled.
 //
-// Disable an existing User Group
+// # Disable an existing User Group
 //
 // Parameters:
 //
@@ -85,7 +85,7 @@ func (sdk *UsergroupsNamespace) Disable(ctx context.Context, token string, userg
 
 // Enable enables a disabled User Group for the team. Supply the User Group's encoded ID in `usergroup` and optionally request its member count with `include_count`.
 //
-// Enable a User Group
+// # Enable a User Group
 //
 // Parameters:
 //
@@ -98,7 +98,7 @@ func (sdk *UsergroupsNamespace) Enable(ctx context.Context, token string, usergr
 
 // List lists the User Groups available for a team. Use the inclusion flags to return member lists, member counts, or disabled User Groups alongside the default User Group details.
 //
-// List all User Groups for a team
+// # List all User Groups for a team
 //
 // Parameters:
 //
@@ -112,7 +112,7 @@ func (sdk *UsergroupsNamespace) List(ctx context.Context, token string, includeU
 
 // Update updates an existing User Group's name, handle, description, default channels, or member count setting. Supply `usergroup` to identify the group, then include only the properties you want to change.
 //
-// Update an existing User Group
+// # Update an existing User Group
 //
 // Parameters:
 //
@@ -141,7 +141,7 @@ func NewUsergroupsUsersNamespace(config ClientConfig) *UsergroupsUsersNamespace 
 
 // List lists the users who belong to a specified User Group. Supply `usergroup` to select the group and use `include_disabled` when results may involve disabled User Groups.
 //
-// List all users in a User Group
+// # List all users in a User Group
 //
 // Parameters:
 //
@@ -154,7 +154,7 @@ func (sdk *UsergroupsUsersNamespace) List(ctx context.Context, token string, use
 
 // Update replaces the complete membership list for a User Group. Supply `usergroup` and the comma-separated `users` value; the submitted list becomes the group's entire user membership.
 //
-// Update the list of users for a User Group
+// # Update the list of users for a User Group
 //
 // Parameters:
 //
@@ -202,7 +202,7 @@ func (sdk *UsersNamespace) Conversations(ctx context.Context, token *string, use
 
 // DeletePhoto deletes the profile photo associated with the authenticated user. Send the required authentication token in the form body to authorize removal of the current photo.
 //
-// Delete the user profile photo
+// # Delete the user profile photo
 //
 // Parameters:
 //
@@ -295,7 +295,7 @@ func (sdk *UsersNamespace) SetActive(ctx context.Context, token string) (*UsersS
 
 // SetPhoto updates a user's profile photo. Submit the image with optional crop coordinates and dimensions, using the authentication token included in the form.
 //
-// Set the user profile photo
+// # Set the user profile photo
 //
 // Parameters:
 //

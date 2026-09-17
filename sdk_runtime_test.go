@@ -20,7 +20,7 @@ func TestEncodePathSegment(t *testing.T) {
 func TestQueryArrayStyles(t *testing.T) {
 	got := appendQueryString("https://example.test/resource", map[string]any{
 		"repeated": QueryValue{Value: []string{"a", "雪"}, Style: "form", Explode: true},
-		"csv": QueryValue{Value: []string{"a", "b"}, Style: "form", Explode: false},
+		"csv":      QueryValue{Value: []string{"a", "b"}, Style: "form", Explode: false},
 	})
 	if !strings.Contains(got, "repeated=a") || !strings.Contains(got, "repeated=%E9%9B%AA") {
 		t.Fatalf("repeated query values were not serialized independently: %s", got)
@@ -43,11 +43,11 @@ func TestRequestLayerUsesFakeMiddleware(t *testing.T) {
 				}
 				return &SdkRawResponse{
 					StatusCode: 200,
-					Headers: map[string]string{"x-request-id": "fake-id"},
-					Body: []byte{123, 34, 111, 107, 34, 58, 116, 114, 117, 101, 125},
-					RequestID: "fake-id",
-					Latency: time.Millisecond,
-					Attempt: req.Attempt,
+					Headers:    map[string]string{"x-request-id": "fake-id"},
+					Body:       []byte{123, 34, 111, 107, 34, 58, 116, 114, 117, 101, 125},
+					RequestID:  "fake-id",
+					Latency:    time.Millisecond,
+					Attempt:    req.Attempt,
 				}, nil
 			},
 		},

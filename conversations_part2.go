@@ -49,7 +49,7 @@ func ConversationsArchive(ctx context.Context, clientConfig ClientConfig, token 
 			"channel": channel,
 		},
 		Headers: OperationHeaders(map[string]any{
-					"token": token,
+			"token": token,
 		}),
 		ContentType: "application/x-www-form-urlencoded",
 		OperationID: "ConversationsArchive",
@@ -74,7 +74,7 @@ func ConversationsClose(ctx context.Context, clientConfig ClientConfig, token *s
 			"channel": channel,
 		},
 		Headers: OperationHeaders(map[string]any{
-					"token": token,
+			"token": token,
 		}),
 		ContentType: "application/x-www-form-urlencoded",
 		OperationID: "ConversationsClose",
@@ -87,7 +87,7 @@ func ConversationsClose(ctx context.Context, clientConfig ClientConfig, token *s
 
 // ConversationsCreate creates a public or private channel-based conversation. Provide `name` for the channel name and set `is_private` to `true` when the conversation should be private. The response contains the created conversation object.
 //
-// Initiates a public or private channel-based conversation
+// # Initiates a public or private channel-based conversation
 //
 // Parameters:
 //
@@ -101,7 +101,7 @@ func ConversationsCreate(ctx context.Context, clientConfig ClientConfig, token *
 			"is_private": isPrivate,
 		},
 		Headers: OperationHeaders(map[string]any{
-					"token": token,
+			"token": token,
 		}),
 		ContentType: "application/x-www-form-urlencoded",
 		OperationID: "ConversationsCreate",
@@ -194,7 +194,7 @@ func ConversationsInvite(ctx context.Context, clientConfig ClientConfig, token *
 			"users":   users,
 		},
 		Headers: OperationHeaders(map[string]any{
-					"token": token,
+			"token": token,
 		}),
 		ContentType: "application/x-www-form-urlencoded",
 		OperationID: "ConversationsInvite",
@@ -219,7 +219,7 @@ func ConversationsJoin(ctx context.Context, clientConfig ClientConfig, token *st
 			"channel": channel,
 		},
 		Headers: OperationHeaders(map[string]any{
-					"token": token,
+			"token": token,
 		}),
 		ContentType: "application/x-www-form-urlencoded",
 		OperationID: "ConversationsJoin",
@@ -246,7 +246,7 @@ func ConversationsKick(ctx context.Context, clientConfig ClientConfig, token *st
 			"user":    user,
 		},
 		Headers: OperationHeaders(map[string]any{
-					"token": token,
+			"token": token,
 		}),
 		ContentType: "application/x-www-form-urlencoded",
 		OperationID: "ConversationsKick",
@@ -271,7 +271,7 @@ func ConversationsLeave(ctx context.Context, clientConfig ClientConfig, token *s
 			"channel": channel,
 		},
 		Headers: OperationHeaders(map[string]any{
-					"token": token,
+			"token": token,
 		}),
 		ContentType: "application/x-www-form-urlencoded",
 		OperationID: "ConversationsLeave",
@@ -333,7 +333,7 @@ func ConversationsMark(ctx context.Context, clientConfig ClientConfig, token *st
 			"ts":      ts,
 		},
 		Headers: OperationHeaders(map[string]any{
-					"token": token,
+			"token": token,
 		}),
 		ContentType: "application/x-www-form-urlencoded",
 		OperationID: "ConversationsMark",
@@ -398,7 +398,7 @@ func ConversationsOpen(ctx context.Context, clientConfig ClientConfig, token *st
 			"return_im": returnIm,
 		},
 		Headers: OperationHeaders(map[string]any{
-					"token": token,
+			"token": token,
 		}),
 		ContentType: "application/x-www-form-urlencoded",
 		OperationID: "ConversationsOpen",
@@ -425,7 +425,7 @@ func ConversationsRename(ctx context.Context, clientConfig ClientConfig, token *
 			"name":    name,
 		},
 		Headers: OperationHeaders(map[string]any{
-					"token": token,
+			"token": token,
 		}),
 		ContentType: "application/x-www-form-urlencoded",
 		OperationID: "ConversationsRename",
@@ -438,7 +438,7 @@ func ConversationsRename(ctx context.Context, clientConfig ClientConfig, token *
 
 // ConversationsReplies retrieves the messages in a conversation thread. Use `channel` and the parent message timestamp in `ts` to identify the thread, and use time bounds, `limit`, or `cursor` to control the returned messages.
 //
-// Retrieve a thread of messages posted to a conversation
+// # Retrieve a thread of messages posted to a conversation
 //
 // Parameters:
 //
@@ -495,7 +495,7 @@ func ConversationsSetPurpose(ctx context.Context, clientConfig ClientConfig, tok
 			"purpose": purpose,
 		},
 		Headers: OperationHeaders(map[string]any{
-					"token": token,
+			"token": token,
 		}),
 		ContentType: "application/x-www-form-urlencoded",
 		OperationID: "ConversationsSetPurpose",
@@ -522,7 +522,7 @@ func ConversationsSetTopic(ctx context.Context, clientConfig ClientConfig, token
 			"topic":   topic,
 		},
 		Headers: OperationHeaders(map[string]any{
-					"token": token,
+			"token": token,
 		}),
 		ContentType: "application/x-www-form-urlencoded",
 		OperationID: "ConversationsSetTopic",
@@ -547,7 +547,7 @@ func ConversationsUnarchive(ctx context.Context, clientConfig ClientConfig, toke
 			"channel": channel,
 		},
 		Headers: OperationHeaders(map[string]any{
-					"token": token,
+			"token": token,
 		}),
 		ContentType: "application/x-www-form-urlencoded",
 		OperationID: "ConversationsUnarchive",

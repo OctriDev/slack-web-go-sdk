@@ -13,20 +13,11 @@ type ClientAuthConfig struct {
 	Headers map[string]string
 }
 
-
-
 const defaultBaseURL = "https://slack.com/api"
-
-
-
-
 
 // applyAuth attaches credentials to the outgoing request. Selection-aware
 // modes validate the current operation before applying any scheme.
 func applyAuth(ctx context.Context, cfg *ClientConfig, headers map[string]string, query map[string]any, operationID string) error {
-
-
-
 
 	if cfg == nil || cfg.Auth == nil {
 		return nil

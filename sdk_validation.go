@@ -4,11 +4,11 @@
 package sdk
 
 import (
-	"fmt"
-	"strings"
 	"encoding/json"
+	"fmt"
 	"net/url"
 	"regexp"
+	"strings"
 )
 
 // ValidateRequired rejects decoded objects that omit a required wire member.

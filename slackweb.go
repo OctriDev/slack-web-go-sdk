@@ -388,7 +388,7 @@ func NewAdminConversationsRestrictAccessNamespace(config ClientConfig) *AdminCon
 
 // AddGroup adds an identity-provider group to the allowlist for a private channel. Supply `group_id` and `channel_id` in the form-encoded request body, and include `team_id` when the channel is tied to one workspace. The group controls which users can access the channel.
 //
-// Add an allowlist of IDP groups for accessing a channel
+// # Add an allowlist of IDP groups for accessing a channel
 //
 // Parameters:
 //
@@ -407,7 +407,7 @@ func (sdk *AdminConversationsRestrictAccessNamespace) AddGroup(ctx context.Conte
 
 // ListGroups lists the identity-provider groups linked to a channel. Supply `channel_id` to identify the channel and include `team_id` when the channel exists only in one workspace. Use a token with the administrative read scope.
 //
-// List all IDP Groups linked to a channel
+// # List all IDP Groups linked to a channel
 //
 // Parameters:
 //
@@ -421,7 +421,7 @@ func (sdk *AdminConversationsRestrictAccessNamespace) ListGroups(ctx context.Con
 
 // RemoveGroup removes an identity-provider group from a private channel's allowlist. Supply `team_id`, `group_id`, and `channel_id` in the form-encoded request body to identify the workspace, group, and channel. Use a token with the administrative write scope.
 //
-// Remove a linked IDP group linked from a private channel
+// # Remove a linked IDP group linked from a private channel
 //
 // Parameters:
 //
@@ -493,7 +493,7 @@ func (sdk *AdminEmojiNamespace) List(ctx context.Context, token string, cursor *
 
 // Remove removes a custom emoji across an Enterprise Grid organization. Provide the emoji `name` together with an authentication token that has the required administrative scope.
 //
-// Remove an emoji across an Enterprise Grid organization
+// # Remove an emoji across an Enterprise Grid organization
 //
 // Parameters:
 //
@@ -674,7 +674,7 @@ func (sdk *AdminTeamsNamespace) Create(ctx context.Context, token string, teamDo
 
 // List lists all teams in an Enterprise organization. Use `cursor` to retrieve subsequent pages and `limit` to control the number of teams returned per request. Authenticate with a token that has the `admin.teams:read` scope.
 //
-// List all teams on an Enterprise organization
+// # List all teams on an Enterprise organization
 //
 // Parameters:
 //

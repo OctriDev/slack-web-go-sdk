@@ -65,7 +65,7 @@ type LoggingConfig struct {
 	Tags        map[string]any
 	// FilterPII defaults to enabled. Set it to sdk.Ptr(false) only for a
 	// deliberately trusted, private telemetry destination.
-	FilterPII   *bool
+	FilterPII *bool
 }
 
 // RetryConfig governs automatic retry behaviour.

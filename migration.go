@@ -7,7 +7,7 @@ import "context"
 
 // MigrationExchange maps workspace-specific user IDs to global user IDs for an Enterprise Grid workspace. Supply up to 400 comma-separated user IDs in `users`, and use `to_old` to request conversion from global IDs back to workspace-specific IDs. Include `team_id` when using an organization token to identify the workspace.
 //
-// For Enterprise Grid workspaces, map local user IDs to global user IDs
+// # For Enterprise Grid workspaces, map local user IDs to global user IDs
 //
 // Parameters:
 //

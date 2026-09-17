@@ -124,7 +124,7 @@ func AuthRevoke(ctx context.Context, clientConfig ClientConfig, token string, te
 func AuthTest(ctx context.Context, clientConfig ClientConfig, token string) (*AuthTestResponse, error) {
 	resp, err := DoCfg[AuthTestResponse](ctx, &clientConfig, "GET", "/auth.test", &RequestOpts{
 		Headers: OperationHeaders(map[string]any{
-					"token": token,
+			"token": token,
 		}),
 		OperationID: "AuthTest",
 	})

@@ -86,7 +86,7 @@ func AdminEmojiList(ctx context.Context, clientConfig ClientConfig, token string
 
 // AdminEmojiRemove removes a custom emoji across an Enterprise Grid organization. Provide the emoji `name` together with an authentication token that has the required administrative scope.
 //
-// Remove an emoji across an Enterprise Grid organization
+// # Remove an emoji across an Enterprise Grid organization
 //
 // Parameters:
 //
